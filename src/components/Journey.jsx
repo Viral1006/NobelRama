@@ -3,7 +3,7 @@ import React from 'react'
 const Journey = () => {
   return ( 
     <div className='bg-[#EBD4CB] overflow-visible w-full h-[60vh] flex flex-col items-start justify-center'>
-      <div className='font-abril text-[40px] text-left flex-col-start ml-48 text-[#101010] mt-4'>
+      <div className='font-abril text-[40px] text-left flex-col-start ml-48 text-[#101010]  mt-1'>
         Embark on a journey through time and witness<br/>  the lives of these 
         incredible laureates. Filter by<br/>  categories and years to immerse yourself in a coveted<br/>  universe of  
         wisdom!

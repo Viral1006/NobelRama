@@ -2,11 +2,6 @@ import React from 'react'
 
 const Homepage = () => {
   return (
-    // <div className=' bg-[#181818] overflow-visible w-full h-auto min-h-[600px] flex' >
-    //     <div className=' font-abril text-9xl flex-auto relative w-[225px] h-auto flex-col md:h-auto text-zinc-100  '>
-    //         NOBELRAMA
-    //     </div>
-    // </div>
     <div className='bg-[#890620] overflow-visible w-full h-[100vh] min-h-[600px] flex flex-col items-center justify-center'>
         <div className='font-abril text-9xl mt-20 text-[#EBD4CB] '>
             NOBELRAMA

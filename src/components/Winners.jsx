@@ -46,42 +46,70 @@
 
 // export default Winners
 
-// src/components/Winners.jsx
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
-const Winners = () => {
-  const [winnersData, setWinnersData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/api/prize.json');
-        // Assuming the API response has a 'prizes' property containing the winners data
-        setWinnersData(response.data.prizes);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+class Winners extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nobelPrizes: [],
+      loading: true
     };
+  }
 
-    fetchData();
-  }, []);
+  componentDidMount() {
+    axios.get('https://api.nobelprize.org/v1/prize.json')
+      .then(response => {
+        console.log('API Response:', response.data); // Log the API response
+        this.setState({ nobelPrizes: response.data.prizes, loading: false });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        this.setState({ loading: false });
+      });
+  }
 
-  return (
-    <div>
-      <h1>Nobel Prize Winners</h1>
-      <ul>
-        {winnersData.map((winner, index) => (
-          <li key={index}>
-            Year: {winner.year}, Category: {winner.category}<br />
-            Motivation: {winner.laureates[0].motivation}<br />
-            Laureate: {winner.laureates[0].firstname} {winner.laureates[0].surname}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+  render() {
+    const { nobelPrizes, loading } = this.state;
+  
+    if (loading) {
+      return <div>Loading...</div>; // or any loading indicator you prefer
+    }
+  
+    return (
+      <div className='bg-[#DA9F93] overflow-visible w-full h-auto min-h-[850px] flex flex-col items-center justify-center'>
+        <div className='font-abril text-[40px] mt-8 mb-10 text-[#890620]'>
+          Nobel Winners
+        </div>
+  
+        <div className='grid grid-cols-2 grid-rows-2 gap-4 font-abril'>
+          {nobelPrizes.map((prize, index) => {
+            if (prize.laureates) {
+              return prize.laureates.map((laureate, innerIndex) => (
+                <div key={`${index}-${innerIndex}`} className='w-auto h-48 px-20 py-32 bg-[#d38e80] rounded-xl'>
+                  <div className='text-lg font-abril -mt-16'>{laureate.firstname} {laureate.surname}</div>
+                  <div className='font-zilla-slab text-base mt-2'>{prize.year}</div>
+                  <div className='font-zilla-slab text-base mt-2'>{prize.category}</div>
+                  <div className='font-zilla-slab text-base mt-2'>{laureate.motivation}</div>
+                </div>
+              ));
+            } else if (prize.overallMotivation) {
+              return (
+                <div key={index} className='w-auto h-48 px-20 py-32 bg-[#d38e80] rounded-xl'>
+                  <div className='text-lg font-abril -mt-16'>{prize.overallMotivation}</div>
+                  <div className='font-zilla-slab text-base mt-2'>{prize.year}</div>
+                  <div className='font-zilla-slab text-base mt-2'>{prize.category}</div>
+                </div>
+              );
+            }
+            return null; // Handle other cases if necessary
+          })}
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Winners;
 

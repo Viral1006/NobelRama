@@ -10,13 +10,13 @@ import Winners from './components/Winners';
 function App() {
   return (
     <div className="App">
-     < Homepage />
+     {/* < Homepage />
      <Celebrating />
      <Categories />
      <Journey />
      <Lucky />
-     <Formfooter/>
-     {/* <Winners /> */}
+     <Formfooter/> */}
+     <Winners />
     </div>
   );
 }

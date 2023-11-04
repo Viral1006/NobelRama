@@ -4,10 +4,10 @@ const Celebrating = () => {
   return ( 
     <div className='bg-[#101010] overflow-visible w-full h-[60vh] flex flex-col md:flex-row items-start justify-center'>
         <div className='md:w-1/2 text-left pl-48 py-32'>
-            <div className='font-abril text-4xl text-[#EBD4CB]'>
+            <div className='font-abril text-4xl text-[#ffffff]'>
                 Celebrating 100 Years
             </div>
-            <div className='font-zilla-slab text-xl text-zinc-100 mt-4'>
+            <div className='font-zilla-slab text-xl text-white mt-4'>
                 Join us in honoring the phenomenal<br/> 
                 achievements of Nobel Prize Winners from the<br/> 
                 last 100 years. Discover the trailblazers who<br/> 

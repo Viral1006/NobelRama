@@ -13,7 +13,7 @@ const Categories = () => {
   ];
 
   return (
-    <div className='bg-[#EBD4CB] overflow-visible w-full h-[50vh] flex flex-col items-start justify-center'>
+    <div className='bg-[#ffffff] overflow-visible w-full h-[50vh] flex flex-col items-start justify-center'>
       {/* {categories.map((category, index) => (
         <div key={index} className='flex items-center justify-between text-left pl-48 py-2 w-full'>
           <span className='mr-2 text-lg font-zilla-slab '>{category}</span>

@@ -5,6 +5,7 @@ import Formfooter from './components/Formfooter';
 import Homepage from './components/Homepage';
 import Journey from './components/Journey';
 import Lucky from './components/Lucky';
+import Winners from './components/Winners';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
      <Journey />
      <Lucky />
      <Formfooter/>
+     {/* <Winners /> */}
     </div>
   );
 }

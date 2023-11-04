@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'abril': ['Abril Fatface', 'cursive'],
+        'zilla-slab': ['Zilla Slab', 'serif'],
+      },
+    },
   },
   plugins: [],
 }

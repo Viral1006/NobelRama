@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Categories = () => {
-  const categories = [
-    'Physics',
-    'Chemistry',
-    'Literature',
-    'Medicine',
-    'Peace',
-    'Economics' // Add more categories if needed
-  ];
+//   const categories = [
+//     'Physics',
+//     'Chemistry',
+//     'Literature',
+//     'Medicine',
+//     'Peace',
+//     'Economics' // Add more categories if needed
+//   ];
 
   return (
     <div className='bg-[#ffffff] overflow-visible w-full h-[50vh] flex flex-col items-start justify-center'>

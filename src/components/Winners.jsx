@@ -38,7 +38,7 @@ class Winners extends Component {
   };
 
   render() {
-    const { filteredPrizes, loading, selectedCategory, selectedYear } = this.state;
+    const { filteredPrizes, loading, selectedYear } = this.state;
   
     if (loading) {
       return <div>Loading...</div>; // or any loading indicator you prefer

@@ -21,35 +21,35 @@ const Categories = () => {
         </div>
       ))} */}
       <div className='flex items-center justify-between text-left pl-48 py-2 w-full '>
-            <span className='mr-2 font-zilla-slab text-xl'>1900-2000</span>
+            <span className='mr-2 font-zilla-slab text-xl'>1900-2023</span>
             <span className='mr-96 font-zilla-slab text-xl'>Physics</span>
             <FontAwesomeIcon icon={faArrowRight} className='mr-72'  />
         </div>
         <div className='w-[70%] ml-48 mt-2 h-[0.5px] bg-[#b4b4b4]'></div>
 
         <div className='flex items-center justify-between text-left pl-48 py-2 w-full'>
-            <span className='mr-2 font-zilla-slab text-xl'>1900-2000</span>
+            <span className='mr-2 font-zilla-slab text-xl'>1900-2023</span>
             <span className='mr-96 font-zilla-slab text-xl'>Chemistry</span>
             <FontAwesomeIcon icon={faArrowRight} className='mr-72' />
         </div>
         <div className='w-[70%] ml-48 mt-2 h-[0.5px] bg-[#b4b4b4]'></div>
 
         <div className='flex items-center justify-between text-left pl-48 py-2 w-full'>
-            <span className='mr-2 font-zilla-slab text-xl'>1900-2000</span>
+            <span className='mr-2 font-zilla-slab text-xl'>1900-2023</span>
             <span className='mr-96 font-zilla-slab text-xl'>Literature</span>
             <FontAwesomeIcon icon={faArrowRight} className='mr-72' />
         </div>
         <div className='w-[70%] ml-48 mt-2 h-[0.5px] bg-[#b4b4b4]'></div>
 
         <div className='flex items-center justify-between text-left pl-48 py-2 w-full'>
-            <span className='mr-2 font-zilla-slab text-xl'>1900-2000</span>
+            <span className='mr-2 font-zilla-slab text-xl'>1900-2023</span>
             <span className='mr-96 font-zilla-slab text-xl'>Medicine</span>
             <FontAwesomeIcon icon={faArrowRight} className='mr-72' />
         </div>
         <div className='w-[70%] ml-48 mt-2 h-[0.5px] bg-[#b4b4b4]'></div>
 
         <div className='flex items-center justify-between text-left pl-48 py-2 w-full'>
-        <span className='mr-2 font-zilla-slab text-xl'>1900-2000</span>
+        <span className='mr-2 font-zilla-slab text-xl'>1900-2023</span>
             <span className='mr-96 font-zilla-slab text-xl'>Peace</span>
             <FontAwesomeIcon icon={faArrowRight} className='mr-72' />
         </div>

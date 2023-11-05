@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Categories from './components/Categories';
 import Celebrating from './components/Celebrating';
 import Formfooter from './components/Formfooter';
@@ -10,13 +11,17 @@ import Winners from './components/Winners';
 function App() {
   return (
     <div className="App">
-     {/* < Homepage />
-     <Celebrating />
-     <Categories />
-     <Journey />
-     <Lucky />
-     <Formfooter/> */}
-     <Winners />
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Homepage />} />
+          <Route path="/Winners" element={<Winners />} />
+        </Routes>
+      </Router>
+      <Celebrating />
+      <Categories />
+      <Journey />
+      <Lucky />
+      <Formfooter />
     </div>
   );
 }

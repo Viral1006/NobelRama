@@ -2,7 +2,7 @@ import React from 'react'
 
 const Lucky = () => {
   return (
-    <div className='bg-[#ffffff] overflow-visible w-full h-auto min-h-[850px] flex flex-col items-center justify-center'>
+    <div className='bg-[#ffffff] overflow-visible w-full h-auto min-h-[850px] mb-10 flex flex-col items-center justify-center'>
         <div className='font-abril text-[40px] mt-8 text-[#890620] '>
             Lucky four
         </div>

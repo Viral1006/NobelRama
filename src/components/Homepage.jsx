@@ -1,17 +1,25 @@
 import React from 'react';
 // import { useNavigate, Link } from 'react-router-dom';
-
+import Celebrating from './Celebrating';
+import Formfooter from './Formfooter';
+import Journey from './Journey';
+import Lucky from './Lucky';
+import Categories from './Categories';
+import { useNavigate } from "react-router-dom";
 const Homepage = () => {
 //   const navigate = useNavigate();
 
 //   const handleButtonClick = () => {
 //     navigate('/winners'); // Navigate to the winners page
 //   };
+const navigate = useNavigate();
 const openWinnersPage = () => {
-    window.open('/Winners', '_blank');
+    // window.open('/winners', '_blank');
+    navigate("/winners");
   };
 
   return (
+    <div>
     <div className='bg-[#443c68] overflow-visible w-full h-[100vh] min-h-[600px] flex flex-col items-center justify-center'>
       <div className='font-abril text-9xl mt-20 text-white '>
         NOBELRAMA
@@ -32,6 +40,12 @@ const openWinnersPage = () => {
         Meet the Laureates
       </button>
     </div>
+    <Celebrating />
+      <Categories />
+      <Journey />
+      <Lucky />
+      <Formfooter />
+      </div>
   );
 };
 

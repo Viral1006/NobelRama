@@ -11,17 +11,13 @@ import Winners from './components/Winners';
 function App() {
   return (
     <div className="App">
-      <Router>
+     
         <Routes>
-          <Route path="/" exact element={<Homepage />} />
-          <Route path="/Winners" element={<Winners />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/winners" element={<Winners />} />
         </Routes>
-      </Router>
-      <Celebrating />
-      <Categories />
-      <Journey />
-      <Lucky />
-      <Formfooter />
+      
+      
     </div>
   );
 }

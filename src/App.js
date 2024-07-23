@@ -7,7 +7,7 @@ import Homepage from './components/Homepage';
 // import Journey from './components/Journey';
 // import Lucky from './components/Lucky';
 import Winners from './components/Winners';
-import { Winnie } from './Winnie';
+// import { Winnie } from './Winnie';
 function App() {
   return (
     <div className="App">

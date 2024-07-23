@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+// import { MdEmail } from 'react-icons/md';
 
 const Formfooter = () => {
   return (

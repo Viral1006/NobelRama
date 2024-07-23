@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const Formfooter = () => {
   return (
@@ -27,9 +28,12 @@ const Formfooter = () => {
           <a href='https://github.com/Viral1006/' target='_blank' rel='noopener noreferrer' className='text-white mr-4'>
             <FaGithub size={30} />
           </a>
-          <a href='https://www.linkedin.com/in/viral-parikh-710828215' target='_blank' rel='noopener noreferrer' className='text-white'>
+          <a href='https://www.linkedin.com/in/viral-parikh-710828215' target='_blank' rel='noopener noreferrer' className='text-white mr-4'>
             <FaLinkedin size={30} />
           </a>
+          {/* <a href='mailto:parikh_viral@outlook.com' className='text-white ml-4'>
+          <MdEmail size={30} />
+        </a> */}
         </div>
         <div className='text-white text-sm mt-2'>
           © 2023 NobelRama. All Rights Reserved.

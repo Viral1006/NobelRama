@@ -72,7 +72,7 @@ class Winners extends Component {
             onChange={(e) => this.handleYearChange(e.target.value)}
           >
             <option value=''>All</option>
-            {Array.from({ length: 2019 - 1900 }, (_, i) => 1900 + i).map(year => (
+            {Array.from({ length: 2025 - 1901 }, (_, i) => 1901 + i).map(year => (
               <option key={year} value={year}>
                 {year}
               </option>

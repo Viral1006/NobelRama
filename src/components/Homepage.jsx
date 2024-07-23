@@ -14,7 +14,7 @@ const Homepage = () => {
 //   };
 const navigate = useNavigate();
 const openWinnersPage = () => {
-    window.open('/winners', '_blank');
+    // window.open('/winners', '_blank');
     navigate("/winners");
   };
 

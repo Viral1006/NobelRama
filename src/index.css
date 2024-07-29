@@ -26,11 +26,11 @@ code {
 
 .page-background {
   background-image: url('/logo2.png'); /* Adjust the path as necessary */
-  background-size: 50%; /* Adjust size as needed */
+  background-size: 30%; /* Adjust size as needed */
   background-position: center; /* Position the image */
   background-repeat: no-repeat; /* Prevent repeating the image */
   background-color: #F5F3F5; /* Optional: set a background color */
-  opacity: 50;  ;
+  opacity: 0.5;
 }
 
 @keyframes dot-move {

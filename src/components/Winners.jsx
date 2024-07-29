@@ -311,6 +311,7 @@ const Winners = () => {
   const [selectedYear, setSelectedYear] = useState('');
   const [loading, setLoading] = useState(true);
   const [selectedWinner, setSelectedWinner] = useState(null); // State for selected winner
+  const [clickedBox, setClickedBox] = useState(null); 
 
   useEffect(() => {
     axios.get('https://api.nobelprize.org/v1/prize.json')
@@ -342,12 +343,14 @@ const Winners = () => {
     setSelectedYear(year);
   };
 
-  const handleBoxClick = (prize) => {
+  const handleBoxClick = (prize, index) => {
     setSelectedWinner(prize); // Set selected winner's details
+    setClickedBox(index);
   };
 
   const handleCloseModal = () => {
     setSelectedWinner(null); // Close the modal
+    setClickedBox(null);
   };
 
   if (loading) {
@@ -376,7 +379,7 @@ const Winners = () => {
           <img src={logo1} alt='Logo' className='w-14 ml-2 rounded-[50%] h-auto' />
         </Link>
       </div>
-      <div className='font-abril text-[40px] -mt-16 mb-10 text-[#333333]'>
+      <div className=' font-abril text-[40px] -mt-16 mb-10 text-[#333333]'>
           Nobel Winners
       </div>
 
@@ -384,7 +387,7 @@ const Winners = () => {
         <label htmlFor='yearFilter' className='font-zilla-slab text-lg'>Filter by Year:</label>
         <select
           id='yearFilter'
-          className='w-32 h-10 border-none border-gray-400 bg-[#dcdcdc] text-[#333333] rounded-lg p-2 focus:outline-none'
+          className='w-32 h-10 border-2 bg-transparent border-[#443c68] text-[#333333] rounded-lg p-2 focus:outline-none'
           value={selectedYear}
           onChange={(e) => handleYearChange(e.target.value)}
         >
@@ -399,10 +402,17 @@ const Winners = () => {
 
       <div className='grid grid-cols-4 grid-rows-4 gap-4 font-abril mx-4'>
         {filteredPrizes.map((prize, index) => (
+          // <div
+          //   key={index}
+          //   className='flex flex-col items-center justify-center shadow-lg w-auto h-48 px-20 py-32 bg-[#dcdcdc] text-[#333333] rounded-xl cursor-pointer'
+          //   onClick={() => handleBoxClick(prize)}
+          // >
           <div
             key={index}
-            className='flex flex-col items-center justify-center shadow-lg w-auto h-48 px-20 py-32 bg-[#dcdcdc] text-[#333333] rounded-xl cursor-pointer'
-            onClick={() => handleBoxClick(prize)}
+            className={`transition-transform duration-300 transform hover:scale-95 ease-in-out flex flex-col items-center justify-center shadow-lg w-auto h-48 px-20 py-32 bg-[#443c68] text-[#ffffff] rounded-xl cursor-pointer ${
+              clickedBox === index ? 'scale-75 ' : ''
+            }`}
+            onClick={() => handleBoxClick(prize, index)}
           >
             <div className='text-lg font-abril -mt-16'>{prize.year}</div>
             <div className='font-zilla-slab text-base mt-2'>{prize.category}</div>
@@ -427,12 +437,10 @@ const Winners = () => {
                 <p className='font-zilla-slab mb-2'><strong>Share:</strong> {laureate.share}</p>
               </div>
             ))}
-            <button
-              className='mt-4 bg-blue-500 text-white px-4 py-2 rounded'
-              onClick={handleCloseModal}
-            >
-              Close
-            </button>
+            <button onClick={handleCloseModal} className='mt-4 w-24 bg-[#333333] text-white font-zilla-slab font-normal 
+      py-2 px-4 rounded-lg transition-transform duration-300 transform hover:scale-95 ease-in-out hover:bg-[#443c68] hover:text-[#ffffff]'>
+        Close
+      </button>
           </div>
         </div>
       )}

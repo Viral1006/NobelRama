@@ -235,17 +235,17 @@
 
 //   if (loading) {
 //     return <div>
-//       <div id="loader" className="fixed inset-0 flex items-center justify-center bg-[#cacaca] z-50">
-//     <div className="flex items-center">
-//       <h2 className="text-2xl text-[#343434] font-semibold mr-2">Hang on,</h2>
-//       <h2 className="text-2xl text-[#343434] font-semibold mr-2">Looking for new winners</h2>
-//       <div className="flex dot-animation">
-//         <div className="dot dot-1"></div>
-//         <div className="dot dot-2"></div>
-//         <div className="dot dot-3"></div>
-//       </div>
-//     </div>
-//   </div>
+  //     <div id="loader" className="fixed inset-0 flex items-center justify-center bg-[#cacaca] z-50">
+  //   <div className="flex items-center">
+  //     <h2 className="text-2xl text-[#343434] font-semibold mr-2">Hang on,</h2>
+  //     <h2 className="text-2xl text-[#343434] font-semibold mr-2">Looking for new winners</h2>
+  //     <div className="flex dot-animation">
+  //       <div className="dot dot-1"></div>
+  //       <div className="dot dot-2"></div>
+  //       <div className="dot dot-3"></div>
+  //     </div>
+  //   </div>
+  // </div>
 //   </div>; // or any loading indicator you prefer
 //   }
 
@@ -351,7 +351,19 @@ const Winners = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>
+        <div id="loader" className="fixed inset-0 flex items-center justify-center bg-[#cacaca] z-50">
+    <div className="flex items-center">
+      <h2 className="text-2xl text-[#343434] font-semibold mr-2">Hang on,</h2>
+      <h2 className="text-2xl text-[#343434] font-semibold mr-2">Looking for new winners</h2>
+      <div className="flex dot-animation">
+        <div className="dot dot-1"></div>
+        <div className="dot dot-2"></div>
+        <div className="dot dot-3"></div>
+      </div>
+    </div>
+  </div>
+    </div>;
   }
 
   const currentYear = new Date().getFullYear();
@@ -411,8 +423,8 @@ const Winners = () => {
             {selectedWinner.laureates.map(laureate => (
               <div key={laureate.id} className='mb-4'>
                 <h3 className='text-lg font-abril mb-1'>{laureate.firstname} {laureate.surname}</h3>
-                <p><strong>Motivation:</strong> {laureate.motivation}</p>
-                <p className='font-zilla mb-2'><strong>Share:</strong> {laureate.share}</p>
+                <p className='font-zilla-slab' ><strong>Motivation:</strong> {laureate.motivation}</p>
+                <p className='font-zilla-slab mb-2'><strong>Share:</strong> {laureate.share}</p>
               </div>
             ))}
             <button

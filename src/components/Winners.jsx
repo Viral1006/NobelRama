@@ -303,6 +303,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import logo1 from '/logo2.png';
+import logo3 from '/logo3.gif';
 
 const Winners = () => {
   const [nobelPrizes, setNobelPrizes] = useState([]);
@@ -357,13 +358,14 @@ const Winners = () => {
     return <div>
         <div id="loader" className="fixed inset-0 flex items-center justify-center bg-[#cacaca] z-50">
     <div className="flex items-center">
-      <h2 className="text-2xl text-[#343434] font-semibold mr-2">Hang on,</h2>
+      {/* <h2 className="text-2xl text-[#343434] font-semibold mr-2">Hang on,</h2>
       <h2 className="text-2xl text-[#343434] font-semibold mr-2">Looking for new winners</h2>
       <div className="flex dot-animation">
         <div className="dot dot-1"></div>
         <div className="dot dot-2"></div>
         <div className="dot dot-3"></div>
-      </div>
+      </div> */}
+      <img src={logo3} alt='Logo' className='w-48 ml-2 rounded-[50%] h-auto' />
     </div>
   </div>
     </div>;

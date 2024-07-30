@@ -35,6 +35,8 @@ export default {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+
+      'custom-max-500': {'max': '500px'},
     },
     extend: {
       fontFamily: {

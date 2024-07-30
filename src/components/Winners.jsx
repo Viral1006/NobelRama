@@ -206,7 +206,7 @@ const Winners = () => {
         </select>
       </div>
 
-      <div className='grid grid-cols-4 grid-rows-4 gap-4 smmax:grid-cols-2 smmax:grid-rows-2 smmax:gap-2 font-abril mx-4 smmax:mx-8 text-center'>
+      <div className='grid grid-cols-4 grid-rows-4 gap-4 smmax:grid-cols-2 smmax:grid-rows-2 smmax:gap-2 font-abril mx-2 smmax:mx-6 text-center'>
         {filteredPrizes.map((prize, index) => (
           // <div
           //   key={index}
@@ -220,10 +220,10 @@ const Winners = () => {
             }`}
             onClick={() => handleBoxClick(prize, index)}
           >
-            <div className='text-lg smmax:text-base font-abril -mt-16 smmax:-mt-6'>{prize.year}</div>
+            <div className='text-lg smmax:text-base font-abril -mt-8 smmax:-mt-6'>{prize.year}</div>
             <div className='font-zilla-slab text-base smmax:text-sm mt-2'>{prize.category}</div>
             {prize.laureates && prize.laureates.map((laureate, innerIndex) => (
-              <div key={`${index}-${innerIndex}`} className='font-abril text-base smmax:text-sm mt-2'>
+              <div key={`${index}-${innerIndex}`} className='font-abril text-base smmax:text-sm w-28 mt-2'>
                 {laureate.firstname} {laureate.surname}
               </div>
             ))}

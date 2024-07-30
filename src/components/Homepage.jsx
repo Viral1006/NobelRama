@@ -7,21 +7,16 @@ import Lucky from './Lucky';
 import Categories from './Categories';
 import { useNavigate } from "react-router-dom";
 const Homepage = () => {
-//   const navigate = useNavigate();
 
-//   const handleButtonClick = () => {
-//     navigate('/winners'); // Navigate to the winners page
-//   };
 const navigate = useNavigate();
 const openWinnersPage = () => {
-    // window.open('/winners', '_blank');
     navigate("/winners");
   };
 
   return (
-    <div className='' >
-    <div className='bg-[#443c68] h-screen  flex flex-col items-center justify-center'>
-      <div className='font-abril text-9xl mt-20 text-white '>
+    <div className='overflow-x-hidden' >
+    <div className='bg-[#443c68] h-screen flex flex-col items-center justify-center'>
+      <div className='font-abril smmax:text-5xl text-9xl mt-20 text-white '>
         NOBELRAMA
       </div>
       <div className='font-zilla-slab text-xl text-white text-center mt-4 p-10'>
@@ -46,6 +41,7 @@ const openWinnersPage = () => {
       <Lucky />
       <Formfooter />
       </div>
+      
   );
 };
 
